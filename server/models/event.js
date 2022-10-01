@@ -1,9 +1,8 @@
-// models
 const mongoose = require('mongoose');
 
 const event = mongoose.Schema({
-    title: String, 
-    spots: integer,
+    title: {type: String, default: 'New Event'}, 
+    capacity: {type: Number, default: 2},
     created: {
         type: Date,
         default: Date.now
