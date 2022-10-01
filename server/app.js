@@ -17,7 +17,7 @@ connection.then(()=> {
 })
 
 // routes prefix
-app.use('/api/post', require('./routes/routes'));
+app.use('/api/events', require('./routes/routes'));
 
 
 // start server

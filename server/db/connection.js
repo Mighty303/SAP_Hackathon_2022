@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const user ='martinwong303';
 const pw ='3weGHcxE0RV2m1EQ';
 const dbName = 'Hackathon'
-console.log(`${user} ${pw} ${dbName}`);
 let mongoDB = `mongodb+srv://${user}:${pw}@cluster0.icijb.mongodb.net/${dbName}?retryWrites=true&w=majority`;
 
 module.exports = mongoose.connect(mongoDB, {
