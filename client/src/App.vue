@@ -77,6 +77,7 @@
       });
       this.items[i] - response.data;
       this.unselect();
+      this.items[i] = response.data;
     }
   }
   };
