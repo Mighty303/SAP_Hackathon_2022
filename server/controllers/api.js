@@ -41,6 +41,12 @@ module.exports = class API {
     }
 
     static async deleteEvent(req, res) {
-        res.send('Delete event');
+        Event.findByIdAndDelete(req.params.id)
+        .then(result => {
+            res.status(204).send(result);
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
 }
