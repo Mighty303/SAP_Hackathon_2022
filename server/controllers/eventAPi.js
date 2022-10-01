@@ -1,5 +1,6 @@
-const Event = require("../models/event");
-module.exports = class API {
+const User = require("../models/user");
+
+module.exports = class userAPI {
 
     // fetch all posts
     static async fetchAllEvents(req, res) {
