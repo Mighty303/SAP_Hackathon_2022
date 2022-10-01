@@ -1,9 +1,9 @@
 const router = require('express').Router({mergeParams:true});
 
-const characterRouter = require('./');
-const locationRouter = require('./');
+const eventRouter = require('./events');
+const userRouter = require('./users');
 
-router.use('/:type', characterRouter);
-router.use('/locations', locationRouter);
+router.use('/events', eventRouter);
+router.use('/users', userRouter);
 
 module.exports = router;
