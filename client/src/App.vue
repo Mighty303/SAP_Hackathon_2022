@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <h1 class="subtitle has-text-centered">Bucket List:</h1>
+    <h1 class="subtitle has-text-centered">Event List:</h1>
     <hr />
     <div class ="field has-addons">
       <div class="control is-expanded">
-        <input class="input" v-model="title" type="text" placeholder="Go to mars ..." />
+        <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
       </div>
       <div class="control">
         <a class="button is-info" @click="addItem" :true="!title">Add</a>

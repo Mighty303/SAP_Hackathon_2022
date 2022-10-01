@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const event = mongoose.Schema({
     title: {type: String, required: true},
+    description: {type: String},
+    time: {type: String},
     capacity: {type: Number, default: 2, required: true},
     //password: {type: String, required: true},
     created: {
