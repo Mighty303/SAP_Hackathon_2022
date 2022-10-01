@@ -1,12 +1,13 @@
 // models
 const mongoose = require('mongoose');
 
-const template = mongoose.Schema({
+const event = mongoose.Schema({
     title: String, 
+    spots: integer,
     created: {
         type: Date,
         default: Date.now
     }
 });
 
-module.exports = mongoose.model('Post', template);
+module.exports = mongoose.model('Event', event);
