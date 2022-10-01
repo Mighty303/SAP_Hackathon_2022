@@ -1,10 +1,9 @@
-const User = require("../models/user");
+const Event = require("../models/event");
 
-module.exports = class userAPI {
+module.exports = class eventAPI {
 
     // fetch all posts
     static async fetchAllEvents(req, res) {
-        //res.send('Hello from API');
         try {
             const posts = await Event.find()
             if(!posts) throw new Error('No bucketListItems') 
@@ -16,7 +15,7 @@ module.exports = class userAPI {
             //res.status(200).json(sorted)
             res.status(200).json(posts)
         } catch (err) {
-            res.status(500).json({message: error.message})
+            res.status(500).json({message: err.message})
         }
     }
 
@@ -32,13 +31,11 @@ module.exports = class userAPI {
             if (!posts) throw new Error('Something went wrong saving the bucketListItem')
             res.status(200).json(posts)
         } catch (err) {
-            res.status(500).json({ message: error.message })
+            res.status(500).json({ message: err.message })
         }
-        //res.send('Post new event');
     }
 
     static async patchEvent(req, res) {
-        //res.send('Update event');
         const { id} = req.params
         try {
             const response = await Event.findByIdAndUpdate(id, req.body)
