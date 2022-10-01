@@ -1,12 +1,23 @@
 module.exports = class API {
     // fetch all posts
-    static async fetchAllPost(req, res) {
+    static async fetchAllEvents(req, res) {
         res.send('Hello from API');
     }
 
     // fetch post by ID
-    static async fetchPostByID(req, res) {
+    static async fetchEventByID(req, res) {
         res.send('Fetch Post by ID');
     }
 
+    static async postEvent(req, res) {
+        res.send('Post new event');
+    }
+
+    static async patchEvent(req, res) {
+        res.send('Update event');
+    }
+
+    static async deleteEvent(req, res) {
+        res.send('Delete event');
+    }
 }
