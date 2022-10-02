@@ -8,11 +8,11 @@
 
     <div class="top-menu-buttons">
       <div class="items">
-        <button>Help</button>
+        <button class="button-1">Help</button>
       </div>
-      <button>Profile</button>
+      <button class="button-1">Profile</button>
       <div class="items">
-        <button>Settings</button>
+        <button class="button-1">Settings</button>
       </div>
       <div class="items">
         <img src="../src/assets/calendar.png" height="40" width="40" alt="calendar-logo" />
@@ -48,9 +48,6 @@
         </div>
       </div>
 
-
-
-
       <div class="event-form">
         <div class="">
           <label> Enter event name:
@@ -70,8 +67,9 @@
             <a class="button is-info" @click="addItem" :true="!title">Add</a>
         </div>
       </div>
-
     </div>
+
+    <button class="button-3">Join An Event</button>
 
     <div id="bottom-menu">
       <div class="items">

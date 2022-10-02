@@ -14,7 +14,63 @@ input {
   background-color: white;
   border-radius: 5px;
   padding: 25px;
-}  
+  max-height: 300px;
+  width: 450px;
+}
+
+.button-1{
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 3px 3px;
+  background-image: linear-gradient(to right, orange, orange);
+  border-radius: 4px;
+
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.button-2 {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 3px 3px;
+  background-image: linear-gradient(to right, #69b0ee, #69b0ee);
+  border-radius: 4px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.button-3 {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  padding: 3px 3px;
+  background-image: linear-gradient(to right, #69b0ee, #69b0ee);
+  border-radius: 4px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
 
 .event-capacity {
   color: grey;
@@ -30,16 +86,6 @@ input {
     text-align: center;
 }
 
-#event-list {
-  text-align: center;
-  text-transform: uppercase;
-}
-
-#event-block {
-  display: block;
-  overflow: auto;
-}
-
 .title {
   margin: 25px auto auto auto;
   max-width: 1200px;
@@ -48,9 +94,6 @@ input {
   padding: 15px;
   border-radius: 20px;
 }
-
-
-
 
 .event-planner {
   display: flex;
@@ -62,7 +105,7 @@ input {
   background: rgb(207, 204, 204);
   padding: 15px;
   border-radius: 20px;
-  min-height: 65vh;
+  min-height: 100vh;
 }
 
 .icon {
@@ -72,7 +115,7 @@ input {
 .top-menu-banner {
   display: flex;
   background: rgb(0, 97, 153);
-  height: 100px;
+  height: 130px;
   padding-right: 1em;
   gap: 10px;
 }
@@ -84,7 +127,7 @@ input {
   align-items: center;
   padding: 2px;
   margin: auto 0px auto 400px;
-  width: 75%;
+  width: 100%;
 }
 
 .top-menu-buttons {
@@ -99,6 +142,25 @@ input {
 .items {
   display: flex;
   flex-direction: row;
+}
+
+#header-h1 {
+  font-size: 50px;
+}
+
+#white-header {
+  color: white;
+  font-size: 40px;
+}
+
+#event-list {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#event-block {
+  display: block;
+  overflow: auto;
 }
 
 #bottom-menu {
