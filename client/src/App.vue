@@ -51,21 +51,16 @@
 
 
       <div class="event-form">
-          <div class="">
-            <label> Enter event name:
-              <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
-            </label>
-          </div>
+        <div class="">
+          <label> Enter event name:
+            <input class="txt-field" v-model="title" type="text" placeholder="Grab a coffee ..." required/>
+          </label>
+        </div>
         <div>
           Choose Capacity<br>
         </div>
         <div>
-          <select class="form-select" v-model="capacity">
-            <option value=2>Two</option>
-            <option value=3>Three</option>
-            <option value=4>Four</option>
-            <option value=5>Five</option>
-          </select>
+          <input type="number" value=2 max="150" min="2" />
         </div>
         <div>
           <form action="" method="get">
@@ -74,7 +69,7 @@
         </div>
         <div class="btn-submit">
             <a class="button is-info" @click="addItem" :true="!title">Add</a>
-          </div>
+        </div>
       </div>
 
     </div>
