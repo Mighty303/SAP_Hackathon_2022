@@ -1,14 +1,11 @@
 <template>
   <div class="top-menu-banner">
     <div class="items">
+      <h1>SAP Fun Finder</h1>
       <ButtonToggle/>
       <ButtonCounter/>
-      <span>HELLO</span>
     </div>
-
   </div>
-
-
 
   <div class="event-planner">
     <h1 class="subtitle has-text-centered">Event List:</h1>
@@ -41,6 +38,13 @@
       </div>
     </div>
   </div>
+
+  <div id="bottom-menu">
+    <div class="items">
+      <h1>SAP Find Fun</h1>
+    </div>
+  </div>
+  
 </template>
 
 <script>
@@ -123,5 +127,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#bottom-menu {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  left: 0;
+  background: teal;
+  height: 50px;
+  width: 100%;
 }
 </style>
