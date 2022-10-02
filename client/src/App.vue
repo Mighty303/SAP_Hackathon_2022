@@ -10,44 +10,55 @@
     </div>
   </div>
 
-  <div class="event-planner">
-    <h1 class="subtitle has-text-centered">Event List:</h1>
-    <hr />
-    <div class ="field has-addons">
-      <div class="control is-expanded">
-        <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
-      </div>
-      <div class="control">
-        <a class="button is-info" @click="addItem" :true="!title">Add</a>
-      </div>
+  <div id="event-block">
+    <div class="title">
+      <h1 class="subtitle has-text-centered">Event List:</h1>
+      <hr />
     </div>
-    <div class="notification" v-for="(item, i) in items" :key="item._id">
-      <div class="columns">
-        <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
-        <p v-else class="column">
-          <span class="tag is-primary">{{ i + 1}}</span>
-          {{ item.title }}
-        </p>
-        <div class="column is-narrow">
-          <span class="icon has-text-primary" 
-          @click="isSelected(item) ? unselect() : select(item)">
-            <i class="material-icons">{{isSelected(item) ? 'close': 'edit'}}</i>
-          </span>
-          <span class="icon has-text-info" 
-          @click="isSelected(item) ? updateItem(item, i) : removeItem(item, i)">
-            <i class="material-icons">{{isSelected(item) ? 'save': 'delete'}}</i>
-          </span>
+  
+    <div class="event-planner">
+      <div>
+        <div class ="field has-addons">
+          <div class="control is-expanded">
+            <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
+          </div>
+          <div class="control">
+            <a class="button is-info" @click="addItem" :true="!title">Add</a>
+          </div>
+        </div>
+        <div class="notification" v-for="(item, i) in items" :key="item._id">
+          <div class="columns">
+            <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
+            <p v-else class="column">
+              <span class="tag is-primary">{{ i + 1}}</span>
+              {{ item.title }}
+            </p>
+            <div class="column is-narrow">
+              <span class="icon has-text-primary" 
+              @click="isSelected(item) ? unselect() : select(item)">
+                <i class="material-icons">{{isSelected(item) ? 'close': 'edit'}}</i>
+              </span>
+              <span class="icon has-text-info" 
+              @click="isSelected(item) ? updateItem(item, i) : removeItem(item, i)">
+                <i class="material-icons">{{isSelected(item) ? 'save': 'delete'}}</i>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div id="bottom-menu">
+      <ButtonToggle/>
+
+      <ButtonCounter/>
+    </div>
+
+    <div id="bottom-menu">
     <div class="items">
       <h1>SAP Find Fun</h1>
     </div>
   </div>
-  
+
+  </div>
 </template>
 
 <script>
@@ -109,8 +120,23 @@
 </script>
 
 <style>
+#event-block {
+  display:block;
+  overflow: auto;
+}
+.title {
+  margin: 25px auto auto auto;
+  max-width: 750px;
+
+  background: grey;
+  padding: 15px;
+  border-radius: 20px;
+}
+
 .event-planner {
-  margin: 25px auto 25px auto;
+  display: flex;
+  flex-direction: row;
+  margin: -60px auto 1em auto;
   max-width: 750px;
 
   background: grey;
@@ -142,7 +168,8 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  left: 0;
+  bottom: 0;
+  left: auto;
   background: teal;
   height: 50px;
   width: 100%;
