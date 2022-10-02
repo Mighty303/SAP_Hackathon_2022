@@ -26,8 +26,7 @@
     </div>
 
     <div class="event-planner">
-      <div class="event-items">
-
+      <div>
         <div class="notification" v-for="(item, i) in items" :key="item._id">
           <div class="columns">
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
