@@ -117,10 +117,14 @@ h1 {
   color: white;
   font-size: 32px;
 }
+span {
+  display: inline-block;
+}
 
 #header-h1 {
   font-size: 50px;
 }
+
 
 #white-header {
   color: white;
