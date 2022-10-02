@@ -107,8 +107,12 @@
 
 <style>
 .event-planner {
-  margin: auto;
-  max-width: 700px;
+  margin: 25px auto 25px auto;
+  max-width: 750px;
+
+  background: grey;
+  padding: 15px;
+  border-radius: 20px;
 }
 .icon {
   cursor: pointer;
