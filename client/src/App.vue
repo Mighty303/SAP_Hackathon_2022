@@ -64,12 +64,13 @@
 <script>
   import axios from "axios";
   import ButtonToggle from './components/ButtonToggle.vue';
-  import ButtonCounter from './components/ButtonCounter.vue';
-
+  import FieldAddOn from "./components/FieldAddOn.vue";
+  import EventNotify from "./components/EventNotify.vue";
   export default {
     components: {
     ButtonToggle,
-    ButtonCounter,
+    FieldAddOn,
+    EventNotify
 },
     name: 'App',
     data(){
