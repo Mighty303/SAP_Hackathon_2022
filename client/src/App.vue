@@ -1,10 +1,5 @@
 <template>
   <div class="top-menu-banner">
-
-    <div>
-      <h1>SAP FUN FINDER</h1>
-    </div>
-
     <div class="items">
       <button>Help</button>
     </div>
@@ -19,7 +14,7 @@
 
   <div id="event-block">
     <div class="title">
-      <h1 id="event-list">Event List:</h1>
+      <h1 id="white-header" class="subtitle has-text-centered">Event List</h1>
       <hr />
     </div>
 
@@ -167,7 +162,7 @@ h1 {
   margin: 25px auto auto auto;
   max-width: 1200px;
 
-  background: grey;
+  background: rgb(0, 97, 153);
   padding: 15px;
   border-radius: 20px;
 }
@@ -178,7 +173,7 @@ h1 {
   margin: -60px auto 1em auto;
   max-width: 1200px;
 
-  background: grey;
+  background: rgb(207, 204, 204);
   padding: 15px;
   border-radius: 20px;
 }
@@ -211,9 +206,21 @@ h1 {
   bottom: auto;
   left: auto;
   background: rgb(0, 97, 153);
-  ;
   height: 50px;
   width: 100%;
 }
 
-  </style>
+h1 {
+  color: white;
+  font-size: 32px;
+}
+
+#white-header {
+  color: white;
+  font-size: 64px;
+}
+
+.top-menu-buttons {
+  font-size: 24px;
+}
+</style>
