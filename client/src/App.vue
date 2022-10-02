@@ -142,10 +142,14 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   left: 0;
   background: teal;
   height: 50px;
   width: 100%;
+}
+
+h1 {
+  color: white;
+
 }
 </style>
