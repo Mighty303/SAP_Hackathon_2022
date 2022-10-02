@@ -59,7 +59,6 @@
 
       <ButtonCounter/>
 
-      <EventCalendar/>
     </div>
 
     <div id="bottom-menu">
@@ -75,13 +74,11 @@
   import axios from "axios";
   import ButtonToggle from './components/ButtonToggle.vue';
   import ButtonCounter from './components/ButtonCounter.vue';
-  import EventCalendar from './components\EventCalendar.vue';
 
   export default {
     components: {
     ButtonToggle,
     ButtonCounter,
-    EventCalendar,
 },
     name: 'App',
     data(){

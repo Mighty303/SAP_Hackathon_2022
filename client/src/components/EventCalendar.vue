@@ -1,17 +1,19 @@
-<template>
+<!-- <template>
     <FullCalendar :options="calendarOptions" />
   </template>
 
 <script>
     import '@fullcalendar/core/vdom' // solves problem with Vite
     import FullCalendar from '@fullcalendar/vue'
-    import dayGridPlugin from '@fullcalendar/daygrid'
-    import interactionPlugin from '@fullcalendar/interaction'
+    // import dayGridPlugin from '@fullcalendar/daygrid'
+    // import interactionPlugin from '@fullcalendar/interaction'
     
     export default {
       name: 'EventCalendar',
       
       components: {
+        // dayGridPlugin,
+        // interactionPlugin,
         FullCalendar // make the <FullCalendar> tag available
       },
       data() {
@@ -23,4 +25,4 @@
         }
       }
     }
-    </script>
+    </script> -->
