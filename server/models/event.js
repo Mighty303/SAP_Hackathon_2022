@@ -5,7 +5,7 @@ const event = mongoose.Schema({
     description: {type: String},
     time: {type: String},
     capacity: {type: Number, default: 2, required: true},
-    //password: {type: String, required: true},
+    password: {type: String},
     created: {
         type: Date,
         default: Date.now
