@@ -18,9 +18,14 @@ input {
 .event-form {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   border-radius: 5px;
   padding: 25px;
+}
+
+.event-capacity {
+  color: grey;
 }
 
 .txt-field {
@@ -47,10 +52,12 @@ input {
   margin: 25px auto auto auto;
   max-width: 1200px;
 
-  background: rgb(0, 97, 153);
+  background: #69b0ee;
   padding: 15px;
   border-radius: 20px;
 }
+
+
 
 
 .event-planner {
@@ -63,6 +70,7 @@ input {
   background: rgb(207, 204, 204);
   padding: 15px;
   border-radius: 20px;
+  min-height: 65vh;
 }
 
 .icon {
@@ -72,7 +80,7 @@ input {
 .top-menu-banner {
   display: flex;
   background: rgb(0, 97, 153);
-  height: 50px;
+  height: 80px;
   padding-right: 1em;
   gap: 10px;
 }
@@ -118,7 +126,11 @@ h1 {
   font-size: 32px;
 }
 
+#header-h1 {
+  font-size: 50px;
+}
+
 #white-header {
   color: white;
-  font-size: 50px;
+  font-size: 40px;
 }
