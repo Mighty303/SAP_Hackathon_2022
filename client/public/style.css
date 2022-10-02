@@ -10,11 +10,11 @@ input {
 .event-form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   background-color: white;
   border-radius: 5px;
   padding: 25px;
-}
+}  
 
 .event-capacity {
   color: grey;
@@ -72,7 +72,7 @@ input {
 .top-menu-banner {
   display: flex;
   background: rgb(0, 97, 153);
-  height: 80px;
+  height: 100px;
   padding-right: 1em;
   gap: 10px;
 }
