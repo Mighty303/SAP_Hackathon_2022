@@ -32,7 +32,7 @@
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
             <p v-else class="column ">
               <span class="tag is-primary">{{ i + 1}}</span>
-              {{ item.title }} - <span class="event-capacity"> capacity: {{ item.capacity }}</span> - date: {{ item.time}}
+              {{ item.title }} <br /> - <span class="event-capacity"> capacity: {{ item.capacity }}</span> <br /> - date: {{ item.time}}
             </p>
             <div class="column is-narrow">
               <span class="icon has-text-primary" @click="isSelected(item) ? unselect() : select(item)">
