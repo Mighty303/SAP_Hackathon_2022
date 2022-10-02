@@ -1,14 +1,23 @@
 <template>
+
   <div class="top-menu-banner">
-    <div class="items">
-      <button>Help</button>
+
+    <div class="top-menu-title">
+      <h1>SAP Fun Finder</h1> 
     </div>
-    <div class="items">
-      <button>Profile</button>
+
+    <div class="top-menu-buttons">
+      <div class="items">
+        <button>Help</button>
+      </div>
+      <div class="items">
+        <button>Profile</button>
+      </div>
+      <div class="items">
+        <button>Settings</button>
+      </div>
     </div>
-    <div class="items">
-      <button>Settings</button>
-    </div>
+
   </div>
 
   <div id="event-block">
@@ -173,12 +182,28 @@ export default {
 
 .top-menu-banner {
   display: flex;
-  flex-direction: row;
   background: rgb(0, 97, 153);
-  justify-content: right;
-  align-items: center;
   height: 50px;
   padding-right: 1em;
+  gap: 10px;
+}
+
+.top-menu-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  padding: 2px;
+  margin: auto 0px auto 400px;
+  width: 75%;
+}
+
+.top-menu-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  width: 25%;
+  align-items: center;
   gap: 10px;
 }
 
@@ -207,9 +232,5 @@ h1 {
 #white-header {
   color: white;
   font-size: 64px;
-}
-
-.top-menu-buttons {
-  font-size: 24px;
 }
 </style>
