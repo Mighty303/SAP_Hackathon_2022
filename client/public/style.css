@@ -81,9 +81,9 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: right;
-  align-items: center;
+  text-align: left;
   padding: 2px;
-  margin: auto 0px auto 400px;
+  margin: auto 0px auto 50px;
   width: 75%;
 }
 
@@ -116,6 +116,7 @@ input {
 h1 {
   color: white;
   font-size: 32px;
+  text-align: left;
 }
 span {
   display: inline-block;
@@ -123,6 +124,7 @@ span {
 
 #header-h1 {
   font-size: 50px;
+  text-align: left;
 }
 
 
