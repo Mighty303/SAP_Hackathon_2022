@@ -2,7 +2,8 @@
 
   <div class="top-menu-banner">
     <div class="top-menu-title">
-      <h1 id="header-h1">SAP Fun Finder</h1>
+      <h1 id="header-h1">
+        <img height="20%" width="20%" src="../logo.png"> Fun Finder</h1>
     </div>
 
     <div class="top-menu-buttons">
