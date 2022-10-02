@@ -30,9 +30,9 @@
         <div class="notification" v-for="(item, i) in items" :key="item._id">
           <div class="columns">
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
-            <p v-else class="column">
+            <p v-else class="column ">
               <span class="tag is-primary">{{ i + 1}}</span>
-              {{ item.title }}
+              {{ item.title }} - <span class="event-capacity"> capacity: {{ item.capacity }}</span> 
             </p>
             <div class="column is-narrow">
               <span class="icon has-text-primary" @click="isSelected(item) ? unselect() : select(item)">
@@ -106,7 +106,9 @@ export default {
   methods: {
     async addItem() {
       const response = await axios.post("api/v1/events/", {
-        title: this.title
+        title: this.title,
+        time: this.time,
+        capacity: this.capacity
       });
       this.items.push(response.data)
       this.title = "";
