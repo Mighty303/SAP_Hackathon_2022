@@ -2,6 +2,7 @@
   <div id="app">
     <h1 class="subtitle has-text-centered">Event List:</h1>
     <hr />
+    <ButtonToggle />
     <div class ="field has-addons">
       <div class="control is-expanded">
         <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
@@ -34,7 +35,11 @@
 
 <script>
   import axios from "axios";
+  import ButtonToggle from './components/ButtonToggle.vue';
   export default {
+    components: {
+    ButtonToggle,
+},
     name: 'App',
     data(){
       return {
