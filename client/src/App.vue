@@ -2,7 +2,7 @@
 
   <div class="top-menu-banner">
     <div class="top-menu-title">
-      <h1>SAP Fun Finder</h1>
+      <h1 id="header-h1">SAP Fun Finder</h1>
     </div>
 
     <div class="top-menu-buttons">
@@ -32,7 +32,8 @@
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
             <p v-else class="column ">
               <span class="tag is-primary">{{ i + 1}}</span>
-              {{ item.title }} <br /> - <span class="event-capacity"> capacity: {{ item.capacity }}</span> <br /> - date: {{ item.time}}
+              {{ item.title }} <br /> <span class="event-capacity"> capacity: {{ item.capacity }}</span> <br /> 
+              <span class="event-capacity"> date: {{ item.time}}</span>
             </p>
             <div class="column is-narrow">
               <span class="icon has-text-primary" @click="isSelected(item) ? unselect() : select(item)">
@@ -57,8 +58,6 @@
         </div>
         <div>
           Choose Capacity<br>
-        </div>
-        <div>
           <input type="number" max="150" min="2"  v-model="capacity" />
         </div>
         <div>
