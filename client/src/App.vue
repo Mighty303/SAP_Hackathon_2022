@@ -1,8 +1,11 @@
 <template>
   <div class="top-menu-banner">
     <div class="items">
-      <h1>SAP Fun Finder</h1>
+      <h1>SAP Fun Finder</h1></div>
+    <div class="items">
       <ButtonToggle/>
+    </div>
+    <div class="items">
       <ButtonCounter/>
     </div>
   </div>
@@ -122,12 +125,12 @@
   align-items: center;
   height: 50px;
   padding-right: 1em;
+  gap: 10px;
 }
 
 .items {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
 }
 
 #bottom-menu {
