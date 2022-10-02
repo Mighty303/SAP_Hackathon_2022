@@ -47,35 +47,35 @@
         </div>
       </div>
 
-      <div class="items">
-        <div class col-6>
-          <select class="form-select" aria-label="default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
+      <div class col-6>
+      <select class="form-select" aria-label="default select example">
+        <option selected>Choose Capacity</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+      </div>
+
+
+
+      <div class col-6>
+        Choose Capacity<br>
+        <select class="form-select" v-model="capacity">
+          <option value=2>Two</option>
+          <option value=3>Three</option>
+          <option value=4>Four</option>
+          <option value=5>Five</option>
+        </select>
+      </div>
+      <div class col-6>
+      <form action = "" method = "get">
+        Choose Event Date and Time<br><input type="datetime-local" v-model="time" name="datetime"><br>
+      </form>
+      </div>
+      <div class col-6>
+        <div class="control">
+          <a class="button is-info" @click="addItem" :true="!title">Add</a>
         </div>
-      </div>
-
-
-
-      <div class col-6>
-        <select class="form-select" aria-label="default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-
-      <div class col-6>
-        <select class="form-select" aria-label="default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
       </div>
 
     </div>
@@ -92,22 +92,24 @@
 <script>
 import axios from "axios";
 
-export default {
-  components: {
-  },
-  name: 'App',
-  data() {
-    return {
-      items: [],
-      title: "",
-      editedTitle: "",
-      selected: {}
-    };
-  },
-  async mounted() {
-    const response = await axios.get("api/v1/events/");
-    this.items = response.data;
-  },
+  export default {
+    components: {
+},
+    name: 'App',
+    data(){
+      return {
+        items: [],
+        title: "",
+        editedTitle: "",
+        selected: {},
+        time: "",
+        capacity: 2,
+      };
+    },
+    async mounted() {
+      const response = await axios.get("api/v1/events/");
+      this.items = response.data;
+    },
   methods: {
     async addItem() {
       const response = await axios.post("api/v1/events/", {
