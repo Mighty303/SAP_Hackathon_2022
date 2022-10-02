@@ -3,12 +3,21 @@ h2 {
   color: white;
 }
 
+input {
+    padding: 10px;
+}
+
 .event-form {
   display: flex;
   flex-direction: column;
   background-color: white;
   border-radius: 5px;
   padding: 25px;
+}
+
+.txt-field {
+    max-width: 70%;
+    width: 70%;
 }
 
 .btn-submit {
@@ -102,5 +111,5 @@ h1 {
 
 #white-header {
   color: white;
-  font-size: 64px;
+  font-size: 50px;
 }
