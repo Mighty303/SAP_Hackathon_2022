@@ -1,23 +1,22 @@
 <template>
 
   <div class="top-menu-banner">
-
     <div class="top-menu-title">
-      <h1>SAP Fun Finder</h1> 
+      <h1>SAP Fun Finder</h1>
     </div>
 
     <div class="top-menu-buttons">
       <div class="items">
         <button>Help</button>
       </div>
-      <div class="items">
-        <button>Profile</button>
-      </div>
+      <button>Profile</button>
       <div class="items">
         <button>Settings</button>
       </div>
+      <div class="items">
+        <img src="../src/assets/calendar.png" height="40" width="40" alt="calendar-logo" />
+      </div>
     </div>
-
   </div>
 
   <div id="event-block">
@@ -55,45 +54,37 @@
         </div>
       </div>
 
-      <div class="items">
-        <div class col-6>
-          <select class="form-select" aria-label="default select example">
-            <option selected>Open this select menu</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+
+
+
+      <div class="event-form">
+        <div>
+          Choose Capacity<br>
+        </div>
+        <div>
+          <select class="form-select" v-model="capacity">
+            <option value=2>Two</option>
+            <option value=3>Three</option>
+            <option value=4>Four</option>
+            <option value=5>Five</option>
           </select>
         </div>
-      </div>
-
-
-
-      <div class col-6>
-        <select class="form-select" aria-label="default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-
-      <div class col-6>
-        <select class="form-select" aria-label="default select example">
-          <option selected>Open this select menu</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
+        <div>
+          <form action="" method="get">
+            Choose Event Date and Time<br><input type="datetime-local" v-model="time" name="datetime"><br>
+          </form>
+        </div>
       </div>
 
     </div>
 
     <div id="bottom-menu">
       <div class="items">
-        <h1>SAP FUN FINDER</h1>
+        <h2>SAP FUN FINDER</h2>
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -108,7 +99,9 @@ export default {
       items: [],
       title: "",
       editedTitle: "",
-      selected: {}
+      selected: {},
+      time: "",
+      capacity: 2,
     };
   },
   async mounted() {
@@ -151,6 +144,21 @@ export default {
 </script>
 
 <style>
+h1,
+h2 {
+  color: white;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#event-list {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 #event-block {
   display: block;
   overflow: auto;
