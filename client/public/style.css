@@ -66,9 +66,11 @@ input {
   border-radius: 4px;
 
   color: #fff;
-  font-size: 15px;
+  font-size: 35px;
   font-weight: 700;
   margin-bottom: 25px;
+  margin-left: 45%;
+  padding: 3px;
 }
 
 
