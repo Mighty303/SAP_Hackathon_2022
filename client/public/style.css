@@ -11,6 +11,11 @@ h2 {
   padding: 25px;
 }
 
+.btn-submit {
+    padding-top: 20px;
+    text-align: center;
+}
+
 #event-list {
   text-align: center;
   text-transform: uppercase;

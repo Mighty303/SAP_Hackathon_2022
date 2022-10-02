@@ -51,14 +51,11 @@
 
 
       <div class="event-form">
-        <div class="field has-addons">
-          <div class="control is-expanded">
-            <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
+          <div class="">
+            <label> Enter event name:
+              <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
+            </label>
           </div>
-          <div class="control">
-            <a class="button is-info" @click="addItem" :true="!title">Add</a>
-          </div>
-        </div>
         <div>
           Choose Capacity<br>
         </div>
@@ -75,6 +72,9 @@
             Choose Event Date and Time<br><input type="datetime-local" v-model="time" name="datetime"><br>
           </form>
         </div>
+        <div class="btn-submit">
+            <a class="button is-info" @click="addItem" :true="!title">Add</a>
+          </div>
       </div>
 
     </div>
