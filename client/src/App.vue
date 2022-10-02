@@ -2,12 +2,6 @@
   <div class="top-menu-banner">
     <div class="items">
       <h1>SAP Fun Finder</h1></div>
-    <div class="items">
-      <ButtonToggle/>
-    </div>
-    <div class="items">
-      <ButtonCounter/>
-    </div>
   </div>
 
   <div id="event-block">
@@ -87,13 +81,9 @@
 
 <script>
   import axios from "axios";
-  import ButtonToggle from './components/ButtonToggle.vue';
-  import ButtonCounter from './components/ButtonCounter.vue';
 
   export default {
     components: {
-    ButtonToggle,
-    ButtonCounter,
 },
     name: 'App',
     data(){
