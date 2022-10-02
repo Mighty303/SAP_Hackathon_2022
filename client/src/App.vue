@@ -47,34 +47,25 @@
         </div>
       </div>
 
-      <div class col-6>
-      <select class="form-select" aria-label="default select example">
-        <option selected>Choose Capacity</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
-      </div>
-
-
-
-      <div class col-6>
-        Choose Capacity<br>
-        <select class="form-select" v-model="capacity">
-          <option value=2>Two</option>
-          <option value=3>Three</option>
-          <option value=4>Four</option>
-          <option value=5>Five</option>
-        </select>
-      </div>
-      <div class col-6>
-      <form action = "" method = "get">
-        Choose Event Date and Time<br><input type="datetime-local" v-model="time" name="datetime"><br>
-      </form>
-      </div>
-      <div class col-6>
-        <div class="control">
-          <a class="button is-info" @click="addItem" :true="!title">Add</a>
+      
+      
+      
+      <div class="event-form">
+        <div>
+            Choose Capacity<br>
+        </div>
+        <div>
+          <select class="form-select" v-model="capacity">
+            <option value=2>Two</option>
+            <option value=3>Three</option>
+            <option value=4>Four</option>
+            <option value=5>Five</option>
+          </select>
+        </div>
+        <div>
+          <form action = "" method = "get">
+            Choose Event Date and Time<br><input type="datetime-local" v-model="time" name="datetime"><br>
+          </form>
         </div>
       </div>
 
@@ -82,7 +73,7 @@
 
     <div id="bottom-menu">
       <div class="items">
-        <h1>SAP FUN FINDER</h1>
+        <h2>SAP FUN FINDER</h2>
       </div>
     </div>
   </div>
@@ -146,8 +137,13 @@ import axios from "axios";
 </script>
 
 <style>
-h1 {
+h1, h2 {
   color: white;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
 }
 
 #event-list {
