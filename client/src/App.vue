@@ -1,8 +1,18 @@
 <template>
-  <div id="app">
+  <div class="top-menu-banner">
+    <div class="items">
+      <ButtonToggle/>
+      <ButtonCounter/>
+      <span>HELLO</span>
+    </div>
+
+  </div>
+
+
+
+  <div class="event-planner">
     <h1 class="subtitle has-text-centered">Event List:</h1>
     <hr />
-    <ButtonToggle />
     <div class ="field has-addons">
       <div class="control is-expanded">
         <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
@@ -36,9 +46,12 @@
 <script>
   import axios from "axios";
   import ButtonToggle from './components/ButtonToggle.vue';
+  import ButtonCounter from './components/ButtonCounter.vue';
+
   export default {
     components: {
     ButtonToggle,
+    ButtonCounter,
 },
     name: 'App',
     data(){
@@ -89,12 +102,26 @@
 </script>
 
 <style>
-#app {
+.event-planner {
   margin: auto;
-  margin-top: 3rem;
   max-width: 700px;
 }
 .icon {
   cursor: pointer;
+}
+
+.top-menu-banner {
+  display: flex;
+  background: teal;
+  justify-content: right;
+  align-items: center;
+  height: 50px;
+  padding-right: 1em;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 </style>
