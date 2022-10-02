@@ -84,6 +84,7 @@
 
 <script>
 import axios from "axios";
+import moment from 'moment'
 
 export default {
   components: {
@@ -95,7 +96,7 @@ export default {
       title: "",
       editedTitle: "",
       selected: {},
-      time: "",
+      time: moment(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)).format('YYYY-MM-DDTHH:mm'),
       capacity: 2,
     };
   },
@@ -104,11 +105,14 @@ export default {
     this.items = response.data;
   },
   methods: {
+    moment: function () {
+      return moment();
+    },
     async addItem() {
       const response = await axios.post("api/v1/events/", {
         title: this.title,
         time: this.time,
-        capacity: this.capacity
+        capacity: this.capacity,
       });
       this.items.push(response.data)
       this.title = "";
