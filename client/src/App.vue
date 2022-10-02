@@ -20,14 +20,7 @@
 
     <div class="event-planner">
       <div>
-        <div class="field has-addons">
-          <div class="control is-expanded">
-            <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
-          </div>
-          <div class="control">
-            <a class="button is-info" @click="addItem" :true="!title">Add</a>
-          </div>
-        </div>
+
         <div class="notification" v-for="(item, i) in items" :key="item._id">
           <div class="columns">
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
@@ -51,6 +44,14 @@
       
       
       <div class="event-form">
+        <div class="field has-addons">
+          <div class="control is-expanded">
+            <input class="input" v-model="title" type="text" placeholder="Grab a coffee ..." />
+          </div>
+          <div class="control">
+            <a class="button is-info" @click="addItem" :true="!title">Add</a>
+          </div>
+        </div>
         <div>
             Choose Capacity<br>
         </div>
@@ -144,6 +145,8 @@ h1, h2 {
 .event-form {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: 10px;
 }
 
 #event-list {
@@ -168,6 +171,7 @@ h1, h2 {
 .event-planner {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   margin: -60px auto 1em auto;
   max-width: 1200px;
 
