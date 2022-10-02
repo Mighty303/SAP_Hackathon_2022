@@ -32,7 +32,7 @@
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
             <p v-else class="column ">
               <span class="tag is-primary">{{ i + 1}}</span>
-              {{ item.title }} - <span class="event-capacity"> capacity: {{ item.capacity }}</span> 
+              {{ item.title }} - <span class="event-capacity"> capacity: {{ item.capacity }}</span> - Time: {{ item.time}}
             </p>
             <div class="column is-narrow">
               <span class="icon has-text-primary" @click="isSelected(item) ? unselect() : select(item)">
@@ -59,7 +59,7 @@
           Choose Capacity<br>
         </div>
         <div>
-          <input type="number" value=2 max="150" min="2" />
+          <input type="number" max="150" min="2"  v-model="capacity" />
         </div>
         <div>
           <form action="" method="get">
