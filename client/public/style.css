@@ -44,6 +44,14 @@ input {
   border-radius: 20px;
 }
 
+.event-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
 .event-planner {
   display: flex;
   flex-direction: row;

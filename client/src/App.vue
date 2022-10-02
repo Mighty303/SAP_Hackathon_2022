@@ -26,7 +26,7 @@
     </div>
 
     <div class="event-planner">
-      <div>
+      <div class="event-items">
 
         <div class="notification" v-for="(item, i) in items" :key="item._id">
           <div class="columns">
