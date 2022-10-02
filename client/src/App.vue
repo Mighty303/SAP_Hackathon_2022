@@ -15,6 +15,14 @@
       <h1 class="subtitle has-text-centered">Event List:</h1>
       <hr />
     </div>
+    <div class col-6>
+      <select class="form-select" aria-label="default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
   
     <div class="event-planner">
       <div>
@@ -68,14 +76,12 @@
   import ButtonToggle from './components/ButtonToggle.vue';
   import ButtonCounter from './components/ButtonCounter.vue';
   import EventCalendar from './components\EventCalendar.vue';
-import EventCalendar from './components/EventCalendar.vue';
 
   export default {
     components: {
     ButtonToggle,
     ButtonCounter,
     EventCalendar,
-    EventCalendar
 },
     name: 'App',
     data(){
