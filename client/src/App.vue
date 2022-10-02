@@ -15,6 +15,14 @@
       <h1 class="subtitle has-text-centered">Event List:</h1>
       <hr />
     </div>
+    <div class col-6>
+      <select class="form-select" aria-label="default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+    </div>
   
     <div class="event-planner">
       <div>
@@ -64,12 +72,9 @@
 <script>
   import axios from "axios";
   import ButtonToggle from './components/ButtonToggle.vue';
-  import ButtonCounter from './components/ButtonCounter.vue';
-
   export default {
     components: {
     ButtonToggle,
-    ButtonCounter,
 },
     name: 'App',
     data(){
@@ -168,7 +173,6 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   left: auto;
   background: teal;
   height: 50px;
