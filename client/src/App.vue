@@ -112,6 +112,7 @@
 
 .top-menu-banner {
   display: flex;
+  flex-direction: row;
   background: teal;
   justify-content: right;
   align-items: center;
