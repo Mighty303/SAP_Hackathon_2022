@@ -8,17 +8,18 @@
     <div class="items">
       <button>Help</button>
     </div>
-    <div class="items">
       <button>Profile</button>
-    </div>
     <div class="items">
       <button>Settings</button>
+    </div>
+    <div class="items">
+        <img src="../src/assets/calendar.png" height="40" width="40" alt="calendar-logo"/>
     </div>
   </div>
 
   <div id="event-block">
     <div class="title">
-      <h1 class="subtitle has-text-centered">Event List:</h1>
+      <h1 id="event-list">Event List:</h1>
       <hr />
     </div>
 
@@ -89,8 +90,8 @@
         <h1>SAP FUN FINDER</h1>
       </div>
     </div>
-
   </div>
+
 </template>
 
 <script>
@@ -148,6 +149,15 @@ export default {
 </script>
 
 <style>
+h1 {
+  color: white;
+}
+
+#event-list {
+  text-align: center;
+  text-transform: uppercase;
+}
+
 #event-block {
   display: block;
   overflow: auto;
@@ -206,8 +216,4 @@ export default {
   width: 100%;
 }
 
-h1 {
-  color: white;
-
-}
-</style>
+  </style>
