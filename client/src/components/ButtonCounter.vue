@@ -13,3 +13,4 @@ export default {
         You clicked me {{ count }} times.
         </button>
     </template>
+
