@@ -33,7 +33,6 @@
             <input class="column input" v-if="isSelected(item)" v-model="editedTitle" />
             <p v-else class="column ">
               <span class="tag is-primary">{{ i + 1}}</span>
-              {{ item.title }} <br /> <span class="event-capacity"> capacity: {{ item.capacity }}</span> <br /> 
               <span class="event-capacity"> date: {{ item.time}}</span>
             </p>
             <div class="column is-narrow">
